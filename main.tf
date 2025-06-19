@@ -9,7 +9,7 @@ resource "aws_launch_template" "web_server_as" {
     tags = {
         Name = "DevOps"
     }
-    
+    }
 }
    
 
