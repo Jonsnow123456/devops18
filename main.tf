@@ -1,9 +1,11 @@
 resource "aws_launch_template" "web_server_as" {
-    name = "myproject"
+    name_prefix = "myproject"
     image_id           = "ami-09e6f87a47903347c"
     vpc_security_group_ids = [aws_security_group.web_server.id]
     instance_type = "t2.micro"
     key_name = "sample"
+     tag_specifications {
+      resource_type = "instance"
     tags = {
         Name = "DevOps"
     }
