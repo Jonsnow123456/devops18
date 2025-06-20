@@ -10,13 +10,13 @@
 
   tasks:
     - name: install web server
-      yum: name=httpd state=present
+      dnf: name=httpd state=present
 
     - name: start webserver
       service: name=httpd state=started
 
     - name: install git
-      yum: name=git state=present
+      dnf: name=git state=present
 
     - name: Delete existing directory
       file:
